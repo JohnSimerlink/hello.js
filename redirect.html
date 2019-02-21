@@ -20,12 +20,29 @@ This page is used for authentication as well as POST using the Iframe+form+hash 
 	<div class="loading"><span>&bull;</span><span>&bull;</span><span>&bull;</span></div>
 
 	<h2>Please close this window to continue.</h2>
-	<script>
-		window.onbeforeunload = function(){
-			document.getElementsByTagName('h2')[0].innerHTML="Redirecting, please wait";
-		}
-	</script>
 	<script src="./src/hello.polyfill.js"></script>
 	<script src="./src/hello.js"></script>
+	<script>
+
+		var HYDRA_CLIENT_ID='8258977163a180391e9650cd701402f5f02ff143e6536d278fd004832b284395'
+
+		hello.init({
+				hydra: HYDRA_CLIENT_ID
+			},
+			{
+				redirect_uri: '../redirect.html',
+				display: 'page',
+				// scope: 'friends'
+			});
+		console.log('1redirect.html reached. window location is', window.location)
+		window.onbeforeunload = function(){
+			console.log('redirect.html reached. window location is', window.location)
+			document.getElementsByTagName('h2')[0].innerHTML="Redirecting, please wait";
+		}
+		  const r = hello.getAuthResponse("hydra");
+          console.log("hello auth response", r);
+
+
+	</script>
 </body>
 </html>

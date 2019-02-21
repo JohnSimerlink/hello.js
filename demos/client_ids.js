@@ -19,7 +19,8 @@ var WINDOWS_CLIENT_ID = {
 
 
 // Google Register --  https://console.developers.google.com
-var GOOGLE_CLIENT_ID = '656984324806-sr0q9vq78tlna4hvhlmcgp2bs2ut8uj8.apps.googleusercontent.com';
+// var GOOGLE_CLIENT_ID = '656984324806-sr0q9vq78tlna4hvhlmcgp2bs2ut8uj8.apps.googleusercontent.com';
+var GOOGLE_CLIENT_ID = '939190760389-pbdqb1f4b4fmjaqc2005ocq461o1ieqf.apps.googleusercontent.com';
 
 // To make it a little easier
 var CLIENT_IDS = {

@@ -121,7 +121,6 @@ hello.utils.extend(hello, {
 
 		// Create an instance of Events
 		self.utils.Event.call(self);
-
 		return self;
 	},
 
@@ -207,6 +206,7 @@ hello.utils.extend(hello, {
 		if (typeof (p.network) !== 'string' || !(p.network in _this.services)) {
 			// Trigger the default login.
 			// Ahh we dont have one.
+			console.error('The provided network was not recognized', p.network, _this.services)
 			return promise.reject(error('invalid_network', 'The provided network was not recognized'));
 		}
 
